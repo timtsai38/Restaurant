@@ -1,0 +1,30 @@
+<% layout('layout') %>
+  <div id="register">
+    <h1>六角西餐廳</h1>
+    <h2>享受美食好味道</h2>
+    <div id="register-form">
+      <h2>REGISTER</h2>
+      <article>
+        <h3>就是這樣條款：</h3>
+        <p>
+          Mauris non tempor quam,
+          et lacinia sapien. Mauris accumsan eros eget
+          libero posuere vulputate. Etiam elit elit, 
+          elementum sed varius at, adipiscing vitae est. 
+          Sed nec felis pellentesque, 
+          lacinia dui sed, ultricies sapien...
+        </p>
+      </article>
+      <form action="/register" method="post">
+        <p>Email Address*</p>
+        <input type="text" name="emailAddress" value="">
+        <p>Password*</p>
+        <input type="password" name="password" value="">
+        <p>Confirm Password*</p>
+        <input type="password" name="confirmPassword" value="">
+        <a id="have-account" href="#">已經有帳號了?</a>
+        <input type="submit" name="" value="註冊">
+        <p class="message"><%= error %> <%= success %></p>
+      </form>
+    </div>    
+  </div>

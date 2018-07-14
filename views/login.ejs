@@ -1,0 +1,21 @@
+<% layout('layout') %>
+  <div id="login">
+    <h1>六角西餐廳</h1>
+    <h2>享受美食好味道</h2>
+    <div id="login-form">
+      <h2>LOGIN</h2>
+      <form action="/login" method="post">
+        <p>Email Address*</p>
+        <input type="text" name="emailAddress">
+        <p>Password*</p>
+        <input type="password" name="password">
+        <div id="forget-password">
+          <a href="#">忘記密碼?</a>
+        </div> 
+        <a href="/register">
+          <button type="button" id="register-button">註冊</button>
+        </a>
+        <input type="submit" value="登入">
+      </form>
+    </div>
+  </div>

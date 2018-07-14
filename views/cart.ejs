@@ -1,0 +1,48 @@
+<% layout('layout') %>
+  <div id="cart">
+    <div id="category-list">
+      <h2>馬上訂購美食</h2>
+      <ul>
+        <a href="#">
+          <li>全部(23)</li>
+        </a>
+        <a href="#">
+          <li>只愛吃薯條(18)</li>
+        </a>
+        <a href="#">
+          <li>加熱就可食(1)</li>
+        </a>
+        <a href="#" id="hamburger-series">
+          <li>不敗漢堡系列(4)</li>
+        </a>   
+      </ul>      
+    </div>
+
+    <form id="search-box" action="/cart/search" method="post">
+      <input type="text" name="search">
+      <button type="submit">
+        <i class="fas fa-search"></i>
+      </button>    
+    </form>
+
+    <div id="shopping-cart">
+      <p>結帳去</p>
+      <div id="vertical-line"></div>
+      <i class="fas fa-shopping-cart"></i>
+    </div>
+    
+    <div id="products">
+      <% for (var product in products) { %>
+        <div class="product">
+          <img src="<%= products[product].imgUrl %>" alt="<%= products[product].english_name %>">
+          <h2><%= products[product].chinese_name %></h2>
+          <p><%= products[product].english_name %></p>
+          <hr>
+          <p>$<%= products[product].price %></p>
+          <button type="submit">
+            <i class="fas fa-shopping-cart"></i>加入購物車
+          </button>
+        </div>
+      <% } %>
+    </div>
+  </div>
